@@ -22,6 +22,7 @@ FileConfSample=${ShellDir}/sample/config.sh.sample
 LogDir=${ShellDir}/log
 ListScripts=$(ls ${ScriptsDir} | grep -Eo "j[drx]_\w+[^\.js]")
 ListCron=${ConfigDir}/crontab.list
+DiyDir=${ShellDir}/Diyscripts
 
 ## 导入config.sh
 function Import_Conf {
@@ -225,7 +226,7 @@ function Run_Normal {
   
   FileNameTmp1=$(echo $1 | perl -pe "s|\.js||")
   FileNameTmp2=$(echo $1 | perl -pe "{s|jd_||; s|\.js||; s|^|jd_|}")
-  SeekDir="${ScriptsDir} ${ScriptsDir}/backUp ${ConfigDir}"
+  SeekDir="${ScriptsDir} ${ScriptsDir}/backUp ${ConfigDir} ${DiyDir}"
   FileName=""
   WhichDir=""
 
