@@ -81,6 +81,8 @@ function Cat_All {
   Cat_ScodesBookShop
   echo -e "\n签到领现金："
   Cat_ScodesCash
+  echo -e "\n炸年兽："
+  Cat_Scodes nian "您的好友助力码为" | perl -pe "s|您的好友助力码为||g"
 }
 
 ## 执行并写入日志
